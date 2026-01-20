@@ -1,0 +1,321 @@
+{
+    "flashSales": [
+        {
+            "id": 1,
+            "name": "HAVIT HV-G92 Gamepad",
+            "price": 120,
+            "originalPrice": 160,
+            "discount": 40,
+            "rating": 4.5,
+            "reviews": 88,
+            "image": "https://images.unsplash.com/photo-1592840496694-26d035b52b48?w=400",
+            "colors": [
+                "#DB4444"
+            ]
+        },
+        {
+            "id": 2,
+            "name": "AK-900 Wired Keyboard",
+            "price": 960,
+            "originalPrice": 1160,
+            "discount": 35,
+            "rating": 4.7,
+            "reviews": 79,
+            "image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=400",
+            "colors": [
+                "#000000"
+            ]
+        },
+        {
+            "id": 3,
+            "name": "IPS LCD Gaming Monitor",
+            "price": 370,
+            "originalPrice": 400,
+            "discount": 30,
+            "rating": 4.8,
+            "reviews": 99,
+            "image": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=400",
+            "colors": [
+                "#DB4444",
+                "#000000"
+            ]
+        },
+        {
+            "id": 4,
+            "name": "S-Series Comfort Chair",
+            "price": 375,
+            "originalPrice": 400,
+            "discount": 25,
+            "rating": 4.6,
+            "reviews": 99,
+            "image": "https://images.unsplash.com/photo-1580480055273-228ff5388ef8?w=400",
+            "colors": [
+                "#A0A0A0"
+            ]
+        },
+        {
+            "id": 5,
+            "name": "RGB Gaming Chair",
+            "price": 450,
+            "originalPrice": 550,
+            "discount": 20,
+            "rating": 4.9,
+            "reviews": 120,
+            "image": "https://images.unsplash.com/photo-1598550476439-6847785fcea6?w=400",
+            "colors": [
+                "#808080"
+            ]
+        }
+    ],
+    "bestSelling": [
+        {
+            "id": 6,
+            "name": "The north coat",
+            "price": 260,
+            "originalPrice": 360,
+            "rating": 4.5,
+            "reviews": 65,
+            "image": "https://images.unsplash.com/photo-1539533018447-63fcce2678e3?w=400",
+            "colors": [
+                "#FF6B6B"
+            ]
+        },
+        {
+            "id": 7,
+            "name": "Gucci duffle bag",
+            "price": 960,
+            "originalPrice": 1160,
+            "rating": 4.7,
+            "reviews": 65,
+            "image": "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=400",
+            "colors": [
+                "#8B4513"
+            ]
+        },
+        {
+            "id": 8,
+            "name": "RGB liquid CPU Cooler",
+            "price": 160,
+            "originalPrice": 170,
+            "rating": 4.8,
+            "reviews": 65,
+            "image": "https://images.unsplash.com/photo-1591238371296-d9c8f598c935?w=400",
+            "colors": [
+                "#000000"
+            ]
+        },
+        {
+            "id": 9,
+            "name": "Small BookSelf",
+            "price": 360,
+            "originalPrice": null,
+            "rating": 4.6,
+            "reviews": 65,
+            "image": "https://images.unsplash.com/photo-1594620302200-9a762244a156?w=400",
+            "colors": [
+                "#8B4513"
+            ]
+        }
+    ],
+    "exploreProducts": [
+        {
+            "id": 10,
+            "name": "Breed Dry Dog Food",
+            "price": 100,
+            "rating": 4.3,
+            "reviews": 35,
+            "image": "https://images.unsplash.com/photo-1589924691995-400dc9ecc119?w=400",
+            "colors": []
+        },
+        {
+            "id": 11,
+            "name": "CANON EOS DSLR Camera",
+            "price": 360,
+            "rating": 4.9,
+            "reviews": 95,
+            "image": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=400",
+            "colors": [
+                "#000000"
+            ]
+        },
+        {
+            "id": 12,
+            "name": "ASUS FHD Gaming Laptop",
+            "price": 700,
+            "rating": 4.8,
+            "reviews": 325,
+            "image": "https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=400",
+            "colors": [
+                "#000000"
+            ]
+        },
+        {
+            "id": 13,
+            "name": "Curology Product Set",
+            "price": 500,
+            "rating": 4.5,
+            "reviews": 145,
+            "image": "https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=400",
+            "colors": []
+        },
+        {
+            "id": 14,
+            "name": "Kids Electric Car",
+            "price": 960,
+            "rating": 4.7,
+            "reviews": 65,
+            "image": "https://images.unsplash.com/photo-1581235720704-06d3acfcb36f?w=400",
+            "colors": [
+                "#DB4444",
+                "#000000"
+            ],
+            "isNew": true
+        },
+        {
+            "id": 15,
+            "name": "Jr. Zoom Soccer Cleats",
+            "price": 1160,
+            "originalPrice": 1360,
+            "rating": 4.6,
+            "reviews": 35,
+            "image": "https://images.unsplash.com/photo-1511556532299-8f662fc26c06?w=400",
+            "colors": [
+                "#FFFF00",
+                "#DB4444"
+            ],
+            "isNew": true
+        },
+        {
+            "id": 16,
+            "name": "GP11 Shooter USB Gamepad",
+            "price": 660,
+            "rating": 4.8,
+            "reviews": 55,
+            "image": "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=400",
+            "colors": [
+                "#000000",
+                "#DB4444"
+            ]
+        },
+        {
+            "id": 17,
+            "name": "Quilted Satin Jacket",
+            "price": 660,
+            "rating": 4.9,
+            "reviews": 55,
+            "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=400",
+            "colors": [
+                "#1B4D3E",
+                "#FF6B2B"
+            ]
+        }
+    ],
+    "categories": [
+        {
+            "id": 1,
+            "name": "Phones",
+            "icon": "📱"
+        },
+        {
+            "id": 2,
+            "name": "Computers",
+            "icon": "💻"
+        },
+        {
+            "id": 3,
+            "name": "SmartWatch",
+            "icon": "⌚"
+        },
+        {
+            "id": 4,
+            "name": "Camera",
+            "icon": "📷",
+            "active": true
+        },
+        {
+            "id": 5,
+            "name": "HeadPhones",
+            "icon": "🎧"
+        },
+        {
+            "id": 6,
+            "name": "Gaming",
+            "icon": "🎮"
+        }
+    ],
+    "heroBanners": [
+        {
+            "id": 1,
+            "brand": "Apple",
+            "product": "iPhone 14 Series",
+            "title": "Up to 10% off Voucher",
+            "image": "https://images.unsplash.com/photo-1678652197950-952ca68a76e9?w=800",
+            "link": "/products/iphone-14"
+        }
+    ],
+    "sidebarCategories": [
+        "Woman's Fashion",
+        "Men's Fashion",
+        "Electronics",
+        "Home & Lifestyle",
+        "Medicine",
+        "Sports & Outdoor",
+        "Baby's & Toys",
+        "Groceries & Pets",
+        "Health & Beauty"
+    ],
+    "newArrivals": [
+        {
+            "id": 1,
+            "title": "PlayStation 5",
+            "description": "Black and White version of the PS5 coming out on sale.",
+            "image": "https://images.unsplash.com/photo-1606813907291-d86efa9b94db?w=600",
+            "link": "/products/ps5",
+            "size": "large"
+        },
+        {
+            "id": 2,
+            "title": "Women's Collections",
+            "description": "Featured woman collections that give you another vibe.",
+            "image": "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=400",
+            "link": "/collections/women",
+            "size": "medium"
+        },
+        {
+            "id": 3,
+            "title": "Speakers",
+            "description": "Amazon wireless speakers",
+            "image": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=400",
+            "link": "/products/speakers",
+            "size": "small"
+        },
+        {
+            "id": 4,
+            "title": "Perfume",
+            "description": "GUCCI INTENSE OUD EDP",
+            "image": "https://images.unsplash.com/photo-1541643600914-78b084683601?w=400",
+            "link": "/products/perfume",
+            "size": "small"
+        }
+    ],
+    "services": [
+        {
+            "id": 1,
+            "icon": "🚚",
+            "title": "FREE AND FAST DELIVERY",
+            "description": "Free delivery for all orders over $140"
+        },
+        {
+            "id": 2,
+            "icon": "🎧",
+            "title": "24/7 CUSTOMER SERVICE",
+            "description": "Friendly 24/7 customer support"
+        },
+        {
+            "id": 3,
+            "icon": "✓",
+            "title": "MONEY BACK GUARANTEE",
+            "description": "We return money within 30 days"
+        }
+    ]
+}
