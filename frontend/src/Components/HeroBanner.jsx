@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom'; // Assuming Link is from react-router-d
 const HeroBanner = ({ banners }) => {
     const [currentSlide, setCurrentSlide] = useState(0);
 
-    // Using the generated luxury images for a few slides to demonstrate the new look
+    // Using web-accessible luxury images for the production build
     const luxuryImages = [
-        "/Users/kirank/.gemini/antigravity/brain/658b93d9-2f6d-4fd8-8a9f-a46f096960aa/luxury_watch_banner_1768901728324.png",
-        "/Users/kirank/.gemini/antigravity/brain/658b93d9-2f6d-4fd8-8a9f-a46f096960aa/luxury_perfume_banner_1768901821841.png",
-        "/Users/kirank/.gemini/antigravity/brain/658b93d9-2f6d-4fd8-8a9f-a46f096960aa/luxury_headphones_banner_1768901938640.png"
+        "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=1600&q=80", // Watch
+        "https://images.unsplash.com/photo-1541643600914-78b084683601?w=1600&q=80", // Perfume
+        "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=1600&q=80"  // Headphones
     ];
 
     useEffect(() => {
@@ -17,7 +17,7 @@ const HeroBanner = ({ banners }) => {
             setCurrentSlide((prev) => (prev + 1) % banners.length);
         }, 8000); // Slower, more graceful transition
         return () => clearInterval(interval);
-    }, [banners?.length]);
+    }, [banners]);
 
     if (!banners || banners.length === 0) return null;
 
