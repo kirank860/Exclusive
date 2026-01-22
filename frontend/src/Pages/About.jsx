@@ -21,7 +21,7 @@ const About = () => {
         },
         {
             id: 2,
-            name: 'Emma Watson',
+            name: 'Emma Watsons',
             role: 'Managing Director',
             image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=500&fit=crop',
             social: { twitter: '#', instagram: '#', linkedin: '#' }

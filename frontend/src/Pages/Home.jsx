@@ -1,15 +1,34 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import HeroBanner from '../Components/HeroBanner';
 import ProductCard from '../Components/ProductCard';
 import CountdownTimer from '../Components/CountdownTimer';
 import SectionHeader from '../Components/SectionHeader';
 import CategoryCard from '../Components/CategoryCard';
 import Services from '../Components/Services';
+import Products from '../Components/Products';
 import productsData from '../data/productsData.json';
 
 
 const Home = () => {
     const productsScrollRef = useRef(null);
+    const [flashSales, setFlashSales] = useState([]);
+    const [bestSelling, setBestSelling] = useState([]);
+
+    useEffect(() => {
+        const API_BASE_URL = process.env.REACT_APP_API_URL || "http://localhost:5001";
+
+        // Fetch Flash Sales
+        fetch(`${API_BASE_URL}/api/products?category=Flash Sales`)
+            .then(res => res.json())
+            .then(data => setFlashSales(data))
+            .catch(err => console.error("Error fetching Flash Sales:", err));
+
+        // Fetch Best Selling
+        fetch(`${API_BASE_URL}/api/products?category=Best Selling`)
+            .then(res => res.json())
+            .then(data => setBestSelling(data))
+            .catch(err => console.error("Error fetching Best Selling:", err));
+    }, []);
 
 
     const scrollProducts = (direction) => {
@@ -67,11 +86,15 @@ const Home = () => {
                                 ref={productsScrollRef}
                                 className="flex gap-10 overflow-x-auto scroll-smooth pb-10 scrollbar-none snap-x"
                             >
-                                {productsData.flashSales.map((product) => (
-                                    <div key={product.id} className="snap-start">
-                                        <ProductCard product={product} showDiscount={true} />
-                                    </div>
-                                ))}
+                                {flashSales.length > 0 ? (
+                                    flashSales.map((product) => (
+                                        <div key={product._id} className="snap-start">
+                                            <ProductCard product={product} showDiscount={true} />
+                                        </div>
+                                    ))
+                                ) : (
+                                    <div className="text-luxury-black/30 font-serif italic py-10">Preparing live offers...</div>
+                                )}
                             </div>
                         </div>
                     </section>
@@ -101,9 +124,13 @@ const Home = () => {
                                 onViewAll={() => console.log('View All')}
                             />
                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
-                                {productsData.bestSelling.map((product) => (
-                                    <ProductCard key={product.id} product={product} />
-                                ))}
+                                {bestSelling.length > 0 ? (
+                                    bestSelling.map((product) => (
+                                        <ProductCard key={product._id} product={product} />
+                                    ))
+                                ) : (
+                                    <div className="col-span-full text-luxury-black/30 font-serif italic py-10">Curating collection...</div>
+                                )}
                             </div>
                         </div>
                     </section>
@@ -133,18 +160,14 @@ const Home = () => {
                         </div>
                     </section>
 
-                    {/* Explore Products Grid */}
+                    {/* Explore Products Grid - NOW LIVE FROM BACKEND */}
                     <section className="py-24 md:py-40">
                         <div className="px-6 md:px-12">
                             <SectionHeader
                                 label="Catalogue"
                                 title="Explore Our Pieces"
                             />
-                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
-                                {productsData.exploreProducts.map((product) => (
-                                    <ProductCard key={product.id} product={product} />
-                                ))}
-                            </div>
+                            <Products />
                             <div className="flex justify-center mt-24">
                                 <button className="border border-luxury-black text-luxury-black py-4 px-16 text-xs uppercase tracking-[0.2em] font-bold hover:bg-luxury-black hover:text-white transition-all duration-500">
                                     View Full Catalogue

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import ProductCard from '../Components/ProductCard';
 import SectionHeader from '../Components/SectionHeader';
@@ -7,13 +7,32 @@ import { Star, Heart, Truck, RotateCcw, Plus, Minus } from 'lucide-react';
 
 const ProductDetails = () => {
     const { id } = useParams();
+    const [product, setProduct] = useState(null);
+    const [loading, setLoading] = useState(true);
     const [quantity, setQuantity] = useState(1);
     const [selectedSize, setSelectedSize] = useState('M');
     const [selectedColor, setSelectedColor] = useState('white');
-    const [mainImage, setMainImage] = useState("https://images.unsplash.com/photo-1592840496694-26d035b52b48?w=800");
+    const [mainImage, setMainImage] = useState("");
 
-    // Finding current product or using a default one from flashSales
-    const product = productsData.flashSales.find(p => p.id === parseInt(id)) || productsData.flashSales[0];
+    useEffect(() => {
+        setLoading(true);
+        const API_BASE_URL = process.env.REACT_APP_API_URL || "http://localhost:5001";
+
+        fetch(`${API_BASE_URL}/api/products/${id}`)
+            .then(res => res.json())
+            .then(data => {
+                setProduct(data);
+                setMainImage(data.image);
+                setLoading(false);
+            })
+            .catch(err => {
+                console.error("Error fetching product details:", err);
+                setLoading(false);
+            });
+    }, [id]);
+
+    if (loading) return <div className="min-h-screen flex items-center justify-center font-serif italic text-luxury-gold">Loading Product Details...</div>;
+    if (!product) return <div className="min-h-screen flex items-center justify-center font-serif text-luxury-black">Product not found.</div>;
 
     const thumbnails = [
         "https://images.unsplash.com/photo-1592840496694-26d035b52b48?w=200",
